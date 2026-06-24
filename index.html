@@ -143,6 +143,7 @@
           if (item.Website) {
             const link = document.createElement("a");
             link.href = item.Website;
+            item.Title = item.Title || "Untitled Project"; // Default title if missing
             link.textContent = `${item.Title} by ${item.Name}`; //item.Name;
             link.target = "_blank";
             li.appendChild(link);
@@ -150,7 +151,7 @@
             const span = document.createElement("span");
             span.textContent = item.Name;
             span.className = "no-link";
-            li.appendChild(span);
+            // li.appendChild(span);
           }
 
           list.appendChild(li);
